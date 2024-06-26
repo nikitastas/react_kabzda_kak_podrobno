@@ -1,8 +1,11 @@
+import {useState} from 'react';
+
 type Props = {
-    on: boolean
+    // on: boolean
 }
 
-export const OnOff = ({on}: Props) => {
+export const OnOff = () => {
+    const [on, setOn] = useState(false);
 
     const onStyle = {
         width: '30px',
@@ -33,8 +36,8 @@ export const OnOff = ({on}: Props) => {
 
     return (
         <div>
-            <div style={onStyle}>On</div>
-            <div style={offStyle}>Off</div>
+            <div style={onStyle} onClick={() => setOn(true)}>On</div>
+            <div style={offStyle} onClick={() => setOn(false)}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     );
