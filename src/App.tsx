@@ -1,11 +1,6 @@
-import React from 'react';
 import './App.css';
-import Accordion from './components/Accordion';
+import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
-
-function hello() {
-    alert('Hello IT-KAMASUTRA');
-}
 
 function App() {
     return (
