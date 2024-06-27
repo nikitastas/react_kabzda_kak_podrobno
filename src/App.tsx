@@ -7,7 +7,7 @@ import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRa
 
 function App() {
     return (
-        <div>
+        <div className={'App'}>
             {/*<PageTitle title={'This is APP component'}/>
             <PageTitle title={'My friends'}/>
             Article 1
