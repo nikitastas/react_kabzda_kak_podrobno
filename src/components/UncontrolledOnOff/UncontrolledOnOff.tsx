@@ -1,12 +1,11 @@
 import {useState} from 'react';
 
 type Props = {
-    on: boolean
-    setOn: (value: boolean) => void
+    // on: boolean
 }
 
-export const OnOff = ({on, setOn}: Props) => {
-
+export const OnOff = () => {
+    const [on, setOn] = useState(false);
 
     const onStyle = {
         width: '30px',
