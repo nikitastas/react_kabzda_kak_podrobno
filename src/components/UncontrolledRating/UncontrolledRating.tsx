@@ -29,7 +29,6 @@ type StarPropsType = {
 function Star({selected, id, setValue}: StarPropsType) {
     console.log('Star rendering');
 
-    return selected ? <span onClick={() => setValue(id)}><b>star </b></span>
-        : <span onClick={() => setValue(id)}>star </span>
+    return <span onClick={() => setValue(id)}>{selected ? <b>star </b> : 'star ' }</span>
 
 }
