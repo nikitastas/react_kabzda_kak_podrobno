@@ -20,7 +20,7 @@ type AccordionTitlePropsType = {
 function AccordionTitle({title, setCollapsed}: AccordionTitlePropsType) {
     console.log('AccordionTitle rendering');
     return (
-        <h3 onClick={setCollapsed}>{title}</h3>
+        <h3 onClick={setCollapsed}>-- {title} --</h3>
     )
 }
 
