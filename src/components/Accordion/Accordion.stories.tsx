@@ -23,6 +23,14 @@ export const FirstStory: Story = {
     }
 }
 
+export const SecondStory: Story = {
+    args: {
+        titleValue: 'hello',
+        collapsed: false,
+        setCollapsed: () => {}
+    }
+}
+
 const onChangeHandler = action('onChange')
 
 export const CollapsedAccordion = () => {
