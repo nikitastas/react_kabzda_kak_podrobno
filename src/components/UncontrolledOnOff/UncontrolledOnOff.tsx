@@ -4,7 +4,7 @@ type Props = {
     // on: boolean
 }
 
-export const OnOff = () => {
+export const UncontrolledOnOff = () => {
     const [on, setOn] = useState(false);
 
     const onStyle = {
