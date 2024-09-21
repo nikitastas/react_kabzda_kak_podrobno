@@ -20,3 +20,10 @@ export const FirstStory: Story = {
         onClick: () => {}
     }
 }
+
+export const SecondStory: Story = {
+    args: {
+        value: 3,
+        onClick: () => {}
+    }
+}
