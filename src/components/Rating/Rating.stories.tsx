@@ -27,3 +27,10 @@ export const SecondStory: Story = {
         onClick: () => {}
     }
 }
+
+export const ThirdStory: Story = {
+    args: {
+        value: 2,
+        onClick: () => {}
+    }
+}
