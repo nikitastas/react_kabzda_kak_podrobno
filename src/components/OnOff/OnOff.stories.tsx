@@ -21,3 +21,10 @@ export const FirstStory: Story = {
         setOn: () => {}
     }
 }
+
+export const SecondStory: Story = {
+    args: {
+        on: false,
+        setOn: () => {}
+    }
+}
