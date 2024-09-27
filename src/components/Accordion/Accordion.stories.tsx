@@ -31,6 +31,14 @@ export const SecondStory: Story = {
     }
 }
 
+export const ThirdStory: Story = {
+    args: {
+        titleValue: 'menu',
+        collapsed: false,
+        setCollapsed: () => {}
+    }
+}
+
 const onChangeHandler = action('onChange')
 
 export const CollapsedAccordion = () => {
