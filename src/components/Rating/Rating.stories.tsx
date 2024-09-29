@@ -1,7 +1,8 @@
 import type {Meta, StoryObj} from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import {Rating} from './Rating';
+import {Rating, RatingValueType} from './Rating';
+import {useState} from 'react';
 
 // const meta: Meta<typeof Accordion> = {
 //     component: Accordion,
@@ -36,3 +37,8 @@ export const ThirdStory: Story = {
 }
 
 export const EmptyRating = () => <Rating value={0} onClick={x => x} />
+
+export const RatingChanging = () => {
+    const [rating, setRating] = useState<RatingValueType>(0)
+    return <Rating value={rating} onClick={setRating} />
+}
