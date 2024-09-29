@@ -34,3 +34,5 @@ export const ThirdStory: Story = {
         onClick: () => {}
     }
 }
+
+export const EmptyRating = () => <Rating value={0} onClick={x => x} />
