@@ -36,6 +36,13 @@ export const ThirdStory: Story = {
     }
 }
 
+export const FourthStory: Story = {
+    args: {
+        value: 1,
+        onClick: () => {}
+    }
+}
+
 export const EmptyRating = () => <Rating value={0} onClick={x => x} />
 
 export const RatingChanging = () => {
