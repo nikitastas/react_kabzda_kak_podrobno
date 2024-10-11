@@ -37,7 +37,8 @@ function App() {
             <UncontrolledRating/>
             <Accordion titleValue={'Menu'}
                        collapsed={accordionCollapsed}
-                       setCollapsed={setAccordionCollapsedHandler}/>
+                       setCollapsed={setAccordionCollapsedHandler}
+                       onClick={() => {console.log('clicked')}}/>
             <OnOff on={on} setOn={setOn}/>
         </div>
     );
