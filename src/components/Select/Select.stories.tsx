@@ -7,13 +7,24 @@ export default {
 }
 
 
-const onChangeHandler = action('onChange')
-
 export const CustomSelect = () => {
-    return <Select items={[{title: 'none', id: 0},
+    const [selectedItem, setSelectedItem] = useState(0)
+    return <Select value={selectedItem} onChange={setSelectedItem} items={[
+        {title: 'Hrodna', id: 0},
         {title: 'Minsk', id: 1},
         {title: 'Moscow', id: 2},
-        {title: 'Kiev', id: 3}]}/>
+        {title: 'Kiev', id: 3}
+    ]}/>
+}
+
+export const CustomSelectWithoutStartValue = () => {
+    const [selectedItem, setSelectedItem] = useState(null)
+    return <Select value={selectedItem} onChange={setSelectedItem} items={[
+        {title: 'Hrodna', id: 0},
+        {title: 'Minsk', id: 1},
+        {title: 'Moscow', id: 2},
+        {title: 'Kiev', id: 3}
+    ]}/>
 }
 
 /*

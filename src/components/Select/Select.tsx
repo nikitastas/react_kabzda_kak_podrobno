@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import styles from './Select.module.css'
 
 type ItemType = {
     title: string
@@ -7,26 +8,35 @@ type ItemType = {
 
 type SelectPropsType = {
     value?: any
-    onChange?: (value: any) => void
+    onChange: (value: any) => void
     items: ItemType[]
 }
 
 export function Select({value, onChange, items}: SelectPropsType) {
-    const [editMode, setEditMode] = useState(false)
-    const [selectedItem, setSelectedItem] = useState(0)
+    const [active, setActive] = useState(false)
+    const [hoveredElementValue, setHoveredElementValue] = useState(value)
 
-    const onItemsClickHandler = (id: number) => {
-        setSelectedItem(id)
+    const toggleItems = () => {
+        setActive(!active)
     }
 
-    const onSelectedItemHandler = () => {
-        setEditMode(!editMode)
+    const onItemClick = (value: any) => {
+        onChange(value);
+        toggleItems();
     }
 
     return (
-        <div>
-            <div onClick={onSelectedItemHandler}>{items[selectedItem].title}</div>
-            {editMode && items.map(i => <div key={i.id} onClick={() => onItemsClickHandler(i.id)} onBlur={() => setEditMode(false)}>{i.title}</div>)}
+        <div className={styles.select}>
+            <span className={styles.main} onClick={toggleItems}>{items[value] && items[value].title}</span>
+            {
+                active && <div className={styles.items}>
+                    {items.map(i => <div onMouseEnter={() => setHoveredElementValue(i.id)}
+                        className={styles.item + ' ' + (i.id === hoveredElementValue ? styles.selected : '')}
+                        key={i.id} onClick={() => onItemClick(i.id)}
+                        onBlur={() => setActive(false)}>{i.title}</div>)}
+                </div>
+            }
+
         </div>
     )
 }
