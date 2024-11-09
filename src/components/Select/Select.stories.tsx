@@ -8,8 +8,8 @@ export default {
 
 
 export const CustomSelect = () => {
-    const [selectedItem, setSelectedItem] = useState(0)
-    return <Select value={selectedItem} onChange={setSelectedItem} items={[
+    const [selectedItem, setSelectedItem] = useState<number | null>(0)
+    return <Select value={selectedItem} setSelectedItem={setSelectedItem} onChange={setSelectedItem} items={[
         {title: 'Hrodna', id: 0},
         {title: 'Minsk', id: 1},
         {title: 'Moscow', id: 2},
@@ -18,8 +18,8 @@ export const CustomSelect = () => {
 }
 
 export const CustomSelectWithoutStartValue = () => {
-    const [selectedItem, setSelectedItem] = useState(null)
-    return <Select value={selectedItem} onChange={setSelectedItem} items={[
+    const [selectedItem, setSelectedItem] = useState<number | null>(null)
+    return <Select value={selectedItem} setSelectedItem={setSelectedItem} onChange={setSelectedItem} items={[
         {title: 'Hrodna', id: 0},
         {title: 'Minsk', id: 1},
         {title: 'Moscow', id: 2},
